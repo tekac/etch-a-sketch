@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,400;1,300&display=swap");
 
-font-family: "Permanent Marker", cursive;
-
 :root {
   --grid-cols: 1;
   --grid-rows: 1;
+
+  --bg-primary: #ece2d0;
+  --bg-secondary: #bfb5af;
 }
 
 *,
@@ -18,22 +19,52 @@ font-family: "Permanent Marker", cursive;
 body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(249, 241, 241);
+  background-color: var(--bg-primary);
   position: relative;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
+}
+
+button {
+  padding: 0.7rem;
+  cursor: pointer;
 }
 
 .title {
   font-family: "Permanent Marker", cursive;
   font-size: 1.5rem;
-  position: absolute;
-  top: 5px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 4rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
+  width: 16.25rem;
+}
+
+.rangeslider {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.slider {
+  cursor: pointer;
 }
 
 .container {
+  background-color: #fff;
   width: 600px;
   height: 600px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -46,4 +77,21 @@ body {
 .grid-item {
   border: 1px solid rgb(156, 156, 156);
   text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    width: 448px;
+    height: 448px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 1rem;
+  }
+  .container {
+    height: 300px;
+    width: 300px;
+  }
 }

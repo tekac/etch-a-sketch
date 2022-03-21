@@ -11,7 +11,24 @@
     <header class="title">
       <h1>Etch-a-Sketch</h1>
     </header>
-    <div class="container"></div>
+    <div class="wrapper">
+      <div class="controls">
+        <button class="rgb-btn">Rainbow Color</button>
+        <div class="rangeslider">
+          <input
+            type="range"
+            min="1"
+            value="16"
+            max="100"
+            autocomplete="off"
+            class="slider"
+          />
+          <span class="slider-value"></span>
+        </div>
+        <button class="clear-btn">Clear Grid</button>
+      </div>
+      <div class="container"></div>
+    </div>
     <script src="/script.js"></script>
   </body>
 </html>
